@@ -35,6 +35,10 @@ end
 
 ### Filters
 
+before do
+  content_type :text
+end
+
 # For CUI friendliness
 after do
   if response.body.is_a?(String) && response.body =~ /\n$/
@@ -72,6 +76,9 @@ EXAMPLES
 AUTHOR
         @uasi
 
+SEE ALSO
+        #{app_url('--function')}
+
 ACKNOWLEDGMENTS
         Vaporbin is inspired by sprunge.us.
   END
@@ -83,6 +90,13 @@ ACKNOWLEDGMENTS
     END
   end
   resp
+end
+
+get %r{^/(?:-f|--?function)$} do
+  <<-END
+netcopy() { curl -F "text=<-" "#{app_url}" }
+netpaste() { curl "#{app_url}$1" }
+  END
 end
 
 get '/:id' do
