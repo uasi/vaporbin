@@ -21,6 +21,14 @@ EXAMPLES
         $ curl -X DELETE http://vaporbin.exsen.org/FoO
         Deleted
 
+        Or, with handy functions,
+
+        $ eval `curl http://vaporbin.exsen.org/--function`
+        $ echo Hello | netcopy
+        http://vaporbin.exsen.org/bAR
+        $ netpaste bAR
+        Hello
+
 AUTHOR
         @uasi
 

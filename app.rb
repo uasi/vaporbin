@@ -66,12 +66,20 @@ DESCRIPTION
         which is currently 25MB, on a least-recently-used basis.
 
 EXAMPLES
-        $ echo "Hello" | curl -F 'text=<-' #{app_url}
+        $ echo Hello | curl -F 'text=<-' #{app_url}
         #{app_url('FoO')}
         $ curl #{app_url('FoO')}
         Hello
         $ curl -X DELETE #{app_url('FoO')}
         Deleted
+
+        Or, with handy functions,
+
+        $ eval `curl #{app_url('--function')}`
+        $ echo Hello | netcopy
+        #{app_url('bAR')}
+        $ netpaste bAR
+        Hello
 
 AUTHOR
         @uasi
