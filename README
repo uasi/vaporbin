@@ -1,0 +1,31 @@
+VAPORBIN(1)                        exsen.org                       VAPORBIN(1)
+
+NAME
+        vaporbin - a pastebin its contents evaporate
+
+SYNOPSIS
+        <command> | curl -F 'text=<-' http://vaporbin.exsen.org/
+        curl http://vaporbin.exsen.org/<key>
+        curl -X DELETE http://vaporbin.exsen.org/<key>
+
+DESCRIPTION
+        Vaporbin is a command line pastebin. A paste will be stored no longer
+        than 24 hours and deleted occasionally to fit within the disk quota,
+        which is currently 25MB, on a least-recently-used basis.
+
+EXAMPLES
+        $ echo "Hello" | curl -F 'text=<-' http://vaporbin.exsen.org/
+        http://vaporbin.exsen.org/FoO
+        $ curl http://vaporbin.exsen.org/FoO
+        Hello
+        $ curl -X DELETE http://vaporbin.exsen.org/FoO
+        Deleted
+
+AUTHOR
+        @uasi
+
+SEE ALSO
+        http://vaporbin.exsen.org/--function
+
+ACKNOWLEDGMENTS
+        Vaporbin is inspired by sprunge.us.
