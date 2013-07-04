@@ -41,8 +41,8 @@ end
 
 # For CUI friendliness
 after do
-  if response.body.is_a?(String) && response.body =~ /\n$/
-    response.body += "\n"
+  if response.body && response.body.last !~ /\n$/
+    response.body << "\n"
   end
 end
 
