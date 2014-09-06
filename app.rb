@@ -102,8 +102,8 @@ end
 
 get %r{^/(?:-f|--?function)$} do
   <<-END
-netcopy() { curl -F "text=<-" "#{app_url}" };
-netpaste() { curl "#{app_url}$1" };
+netcopy() { curl -F "text=<-" "#{app_url}"; }
+netpaste() { curl "#{app_url}$1"; }
   END
 end
 
