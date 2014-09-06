@@ -6,7 +6,9 @@ ADD . /srv/www
 
 WORKDIR /srv/www
 
-RUN bundle install
+ENV RACK_ENV production
+
+RUN bundle install --without=development
 
 EXPOSE 5000
 

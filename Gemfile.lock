@@ -12,7 +12,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     memcachier (0.0.2)
-    puma (2.9.0)
+    puma (2.9.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
