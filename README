@@ -23,7 +23,7 @@ EXAMPLES
 
         Or, with handy functions,
 
-        $ eval `curl http://vaporbin.exsen.org/--function`
+        $ source <(curl -s http://vaporbin.exsen.org/--function)
         $ echo Hello | netcopy
         http://vaporbin.exsen.org/bAR
         $ netpaste bAR
