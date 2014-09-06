@@ -75,7 +75,7 @@ EXAMPLES
 
         Or, with handy functions,
 
-        $ eval `curl #{app_url('--function')}`
+        $ source <(curl -s #{app_url('--function')})
         $ echo Hello | netcopy
         #{app_url('bAR')}
         $ netpaste bAR
