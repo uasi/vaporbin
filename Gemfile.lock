@@ -8,7 +8,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     coderay (1.1.0)
-    dalli (2.7.4)
+    dalli (2.7.5)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     memcachier (0.0.2)
